@@ -31,11 +31,9 @@ export default function TestIndex() {
 		    console.log(myJson.data);
 		    setUser(myJson.data)
 		  });
-   	// setUser([{id:1, name: "carlota"}, {id:2, name:"patata"}])
     // Specify how to clean up after this effect:
     return function cleanup() {
     	setUser([{}])
-      // ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
     };
   }, []);  
 
@@ -62,12 +60,9 @@ export default function TestIndex() {
 			      {id:myJson.id, first_name: myJson.name}
 			    ]);
 			  });
-	   	// setUser([{id:1, name: "carlota"}, {id:2, name:"patata"}])
 	    // Specify how to clean up after this effect:
 	    return function cleanup() {
 	    	console.log("cleanup, newuser")
-	    	// setUser([{}])
-	      // ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
 	    };		
 	  	}
 
